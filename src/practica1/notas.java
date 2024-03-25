@@ -13,7 +13,7 @@ public class notas {
 	//declaramos la variables que nos hacen falta
 	
 	double unidadFormativa1, unidadFormativa2, unidadFormativa3;
-	double acu1, acu2, acu3, def;
+	double acumulado1, acumulado2, acumulado3, definitivo;
 	//utilizames ecaner para poder introducir datos
 	Scanner entrada = new Scanner(System.in);
 	
@@ -82,11 +82,11 @@ public class notas {
      * Calcula los acumulados y la nota definitiva del estudiante.
      */
 	public void Calculonotas() {
-		acu1=unidadFormativa1*0.35;
-		acu2 = unidadFormativa2 * 0.35;
-		acu3 = unidadFormativa3 * 0.30;
+		acumulado1=unidadFormativa1*0.35;
+		acumulado2 = unidadFormativa2 * 0.35;
+		acumulado3 = unidadFormativa3 * 0.30;
 		
-		def = acu1 + acu2+ acu3;
+		definitivo = acumulado1 + acumulado2+ acumulado3;
 		
 		//hasta aqui la tenemos calculada peor no la mostramos
 	}
@@ -103,11 +103,11 @@ public class notas {
 		System.out.println(" nota2 = " + unidadFormativa2);
 		System.out.println(" nota3 = " + unidadFormativa3);
 		
-		System.out.println(" acumuado 1 = "+ acu1);
-		System.out.println(" acumuado 2 = "+ acu2);
-		System.out.println(" acumuado 3 = "+ acu3);
+		System.out.println(" acumuado 1 = "+ acumulado1);
+		System.out.println(" acumuado 2 = "+ acumulado2);
+		System.out.println(" acumuado 3 = "+ acumulado3);
 		
-		System.out.println(" nota definitiva es = "+ def);
+		System.out.println(" nota definitiva es = "+ definitivo);
 		
 	}
 
@@ -117,10 +117,10 @@ public class notas {
 	 */
 	public void aprobado() {
 			
-			if(def<5 && def>=0) {
+			if(definitivo<5 && definitivo>=0) {
 				System.out.println("suspendio");
 			}else {
-				if (def>=5 && def<=10 ) {
+				if (definitivo>=5 && definitivo<=10 ) {
 				System.out.println("aprobado");
 				}else {
 					System.out.println(" error en la notas");
